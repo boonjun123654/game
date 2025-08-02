@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏选项</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .button {
+            margin: 10px;
+            padding: 15px 25px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>选择游戏模式</h1>
+    <button class="button" onclick="startGame(1)">10/1模式</button>
+    <button class="button" onclick="startGame(2)">10/2模式</button>
+    <button class="button" onclick="startGame(3)">10/3模式</button>
+
+    <script>
+        function startGame(mode) {
+            window.location.href = `/game?mode=${mode}`;
+        }
+    </script>
+
+</body>
+</html>
